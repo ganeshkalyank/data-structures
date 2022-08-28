@@ -3,14 +3,17 @@
 using namespace std;
 
 void insertionSort(int arr[],int size) {
-    int i,j;
-    for (i=0;i<size-1;i++) {
-        for (j=i;j<size-i-1;j++) {
-            if (arr[j]<arr[j-1]) {
-                swap(arr[j],arr[j-1]);
-            }
+    int i,key,hole;
+    for (i=1;i<size;i++) {
+        key = arr[i];
+        hole = i;
+        while (hole>0&&key<arr[hole-1]) {
+            arr[hole]=arr[hole-1];
+            hole = hole-1;
         }
+        arr[hole]=key;
     }
+
 }
 
 int main() {
