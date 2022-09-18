@@ -95,7 +95,7 @@ int main() {
 				if (s.emptyStack()) {
 					cout<<"Stack is empty"<<endl;
 				} else {
-					cout<<"Stack is full"<<endl;
+					cout<<"Stack is not empty"<<endl;
 				}
 				break;
 			case 5:
