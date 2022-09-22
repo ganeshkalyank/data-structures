@@ -19,46 +19,6 @@ class List {
 			Head -> count = 0;
 			Head -> list = NULL;
 		}
-
-//		void findPre() {
-//			pPre = NULL;
-//			Node *pLoc = Head->list;
-//			pPre = pLoc;
-//			while (pLoc!=NULL) {
-//				if (pLoc->data<dataIn) {
-//					pPre = pLoc;
-//					pLoc = pLoc->link;
-//				} else break;
-//			}
-//		}
-
-//		void InsertBeg(int dataIn) {
-//			Node *tmp = new Node;
-//			tmp->data=x;
-//			tmp->link=NULL;
-//			if (Head->count==0) {
-//				Head->list=tmp;
-//			} else {
-//				tmp->link=Head->list;
-//				Head->list=tmp;
-//			}
-//			Head->count++;
-//		}
-//		void InsertEnd(int dataIn) {
-//			Node *t = new Node;
-//			t->data=dataIn; t->link=NULL;
-//			if (Head->list==NULL) {
-//				Head->list=t;
-//			} else {
-//				Node *tmp=Head->list;
-//				while(tmp->link!=NULL) {
-//					tmp=tmp->link;
-//				}
-//				tmp->link=t;
-//			}
-//			Head->count++;
-//		}
-
 		void InsertNode(int dataIn) {
 			Node *t=new Node;t->data=dataIn;t->link=NULL;
 			Node *tmp;
