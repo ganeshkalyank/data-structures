@@ -3,26 +3,28 @@
 using namespace std;
 
 void insertionSort(int arr[],int size) {
-    int i,key,hole;
-    for (i=1;i<size;i++) {
-        key = arr[i];
-        hole = i;
-        while (hole>0&&key<arr[hole-1]) {
-            arr[hole]=arr[hole-1];
-            hole = hole-1;
+    int current,hold,walker;
+    for (current=1;current<size;current++) {
+        hold = arr[current];
+        walker = current;
+        while (walker>0&&hold<arr[walker-1]) {
+            arr[walker]=arr[walker-1];
+            walker = walker-1;
         }
-        arr[hole]=key;
+        arr[walker]=hold;
     }
-
 }
 
 int main() {
-    int arr[100],size,i;
+    int i,arr[100],size;
+    cout<<"Enter size: ";
     cin>>size;
+    cout<<"Enter elements: ";
     for (i=0;i<size;i++) {
         cin>>arr[i];
     }
     insertionSort(arr,size);
+    cout<<"Elements after sorting: ";
     for (i=0;i<size;i++) {
         cout<<arr[i]<<" ";
     }
