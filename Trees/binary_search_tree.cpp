@@ -95,13 +95,6 @@ class BST
                     preOrder(t->right);
                 }
             }
-            void inOrder(node *t) {
-                if (t) {
-                    inOrder(t->left);
-                    cout<<t->data<<" ";
-                    inOrder(t->right);
-                }
-            }
             void postOrder(node *t) {
                 if (t) {
                     postOrder(t->left);
@@ -117,7 +110,7 @@ int main()
 	node* Root=NULL;
     do
     {
-    	cout<<endl<<"1. Insert data\t2. Display inorder\t3. Delete data\t4. Find Largest\t5. SearchBST\t6. Find Smallest\t7. Pre Order\t8. In Order\t9. Post Order"<<endl;
+    	cout<<endl<<"1. Insert data\t2. Display inorder\t3. Delete data\t4. Find Largest\t5. SearchBST\t6. Find Smallest\t7. Pre Order\t8. Post Order"<<endl;
     	cout<<"Enter choice : "; cin>>choice;
     	switch(choice)
     	{
@@ -132,8 +125,7 @@ int main()
 					else	cout<<"Key not found";
 			case 6: cout<<"Smallest = "<<tree.findSmallest(Root)->data; break;
             case 7: cout<<"Preorder: ";tree.preOrder(Root);cout<<endl;break;
-            case 8: cout<<"Inorder: ";tree.inOrder(Root);cout<<endl;break;
-            case 9: cout<<"Postorder: ";tree.postOrder(Root);cout<<endl;break;
+            case 8: cout<<"Postorder: ";tree.postOrder(Root);cout<<endl;break;
     	}
     } while (choice <= 9);
     
