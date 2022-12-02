@@ -61,7 +61,7 @@ class Graph {
             if (tmp->data == toKey) toVertex = tmp;
             tmp=tmp->nextVertex;
         }
-        cout<<fromVertex<<" "<<toVertex<<endl;
+        // cout<<fromVertex<<" "<<toVertex<<endl;
         if(fromVertex == NULL) return -2;
         if(toVertex == NULL) return -3;
         newArc->destination = toVertex;

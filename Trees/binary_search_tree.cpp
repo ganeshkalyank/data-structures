@@ -42,29 +42,29 @@ class BST
  					r->left = deleteBST(r->left,x);
  					return r;
  				}
- 				else if (x > r->data)
- 					 {
- 					 	r->right = deleteBST(r->right, x);
- 					 	return r;
- 					 }
- 					else if (!r->left)	  // node found; no left subtree
- 						 {
- 						 	node* tmp=r->right;
-							delete r; return tmp; 
-						 }
- 						else if (!r->right)		// no right subtree
- 							 {
- 							 	node* tmp=r->left;
- 							 	delete r; return tmp;
- 							 }
- 							else
- 							{
- 								node* deleteNode = r;
- 								node* largest = findLargest(r->left);
- 								deleteNode->data = largest->data;
- 								r->left = deleteBST(r->left, largest->data);
-								return r;
- 							}								 		
+				else if (x > r->data)
+						{
+						r->right = deleteBST(r->right, x);
+						return r;
+						}
+				else if (!r->left)	  // node found; no left subtree
+						{
+						node* tmp=r->right;
+						delete r; return tmp; 
+						}
+				else if (!r->right)		// no right subtree
+						{
+						node* tmp=r->left;
+						delete r; return tmp;
+						}
+				else
+				{
+					node* deleteNode = r;
+					node* largest = findLargest(r->left);
+					deleteNode->data = largest->data;
+					r->left = deleteBST(r->left, largest->data);
+					return r;
+				}								 		
  			}
  			node* findLargest(node* t)
  			{
